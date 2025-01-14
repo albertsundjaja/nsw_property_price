@@ -83,7 +83,7 @@ def process_data(file_path):
 
 # Specify the folder containing zip files and the output file
 folder_path = 'raw_data'
-output_file = 'src/raw_assets/raw_data/combined_b_records.data'
+output_file = 'src/assets/raw_data/combined_b_records.data'
 
 # Run the function
 if __name__ == "__main__":

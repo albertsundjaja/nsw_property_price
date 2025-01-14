@@ -2,6 +2,7 @@
 import ModelClient from "@azure-rest/ai-inference";
 import { AzureKeyCredential } from "@azure/core-auth";
 import { ref, onMounted } from 'vue';
+import summaryCsv from './assets/raw_data/summary.csv?raw'; // Import the CSV file as raw text
 
 const csvContent = ref('')
 const prompt = ref('')
@@ -50,15 +51,7 @@ function saveToken() {
 }
 
 async function loadCsv() {
-  try {
-    const response = await fetch('/src/assets/summary.csv');
-    if (!response.ok) {
-      throw new Error('Failed to load CSV file');
-    }
-    csvContent.value = await response.text();
-  } catch (error) {
-    console.error(error);
-  }
+    csvContent.value = summaryCsv
 }
 
 // Automatically load the CSV when the component is mounted
