@@ -6,7 +6,7 @@ from pathlib import Path
 
 def download_and_unzip():
     # Create folder raw_data if not exist
-    output_dir = Path(__file__).parent / 'raw_data'
+    output_dir = Path(__file__).parent / 'src' / 'assets' / 'raw_data'
     output_dir.mkdir(parents=True, exist_ok=True)
 
     for i in range(2, 5):
@@ -78,12 +78,12 @@ def process_data(file_path):
     df = df.groupby('Property Locality').mean(numeric_only=True).reset_index()
     df = df.sort_values(by='Purchase Price', ascending=False)
     df = df.head(100)
-    output_file = Path(__file__).parent / 'raw_data' / 'summary.csv'
+    output_file = Path(__file__).parent / 'src' / 'assets' / 'raw_data'
     df.to_csv(output_file, index=False)
 
 # Specify the folder containing zip files and the output file
 folder_path = 'raw_data'
-output_file = 'raw_data/combined_b_records.data'
+output_file = 'src/raw_assets/raw_data/combined_b_records.data'
 
 # Run the function
 if __name__ == "__main__":

@@ -51,7 +51,7 @@ function saveToken() {
 
 async function loadCsv() {
   try {
-    const response = await fetch('raw_data/summary.csv');
+    const response = await fetch('/src/assets/summary.csv');
     if (!response.ok) {
       throw new Error('Failed to load CSV file');
     }
