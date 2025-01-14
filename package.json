@@ -8,7 +8,8 @@
     "init": "npm run download",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@azure-rest/ai-inference": "^1.0.0-beta.4",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
+    "gh-pages": "^6.3.0",
     "vite": "^6.0.5",
     "vite-plugin-vue-devtools": "^7.6.8"
   }

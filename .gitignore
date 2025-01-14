@@ -28,6 +28,3 @@ coverage
 *.sw?
 
 *.tsbuildinfo
-
-raw_data/
-*.data
